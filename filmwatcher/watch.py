@@ -5,7 +5,7 @@ import urllib.parse
 from email.mime.text import MIMEText
 
 
-SEARCHES = [
+SEARCHES = [ 
     'Rocky Horror',
     'Stilyagi',
     'Whiplash',
@@ -66,5 +66,5 @@ def watchdog():
     mailtext['Subject'] = 'Films showing: %s' % ','.join(found)
     server.sendmail(EMAIL_FROM, EMAIL_TO, mailtext.as_string())
 
-if __name__ == __main__:
+if __name__ == '__main__':
     watchdog()
